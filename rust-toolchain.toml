@@ -12,6 +12,8 @@ components = [
 ]
 # targets = ["thumbv7em-none-eabi"]
 targets = [
+    # For qemu Cortex-M3 example
+    "thumbv7m-none-eabi",
 	# For STM32
 	"thumbv7em-none-eabihf",
 	# For ESP32-C3
