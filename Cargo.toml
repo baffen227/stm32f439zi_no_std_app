@@ -6,10 +6,12 @@ name = "stm32f439zi_no_std_app"
 version = "0.1.0"
 
 [dependencies]
-cortex-m = "0.6.0"
-cortex-m-rt = "0.6.10"
-cortex-m-semihosting = "0.3.3"
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.3"
+cortex-m-semihosting = "0.5.0"
 panic-halt = "0.2.0"
+panic-semihosting = "0.6.0"
+panic-probe = { version = "0.3.1", features = ["defmt"] }
 
 # Uncomment for the panic example.
 # panic-itm = "0.4.1"
@@ -23,6 +25,10 @@ panic-halt = "0.2.0"
 # [dependencies.stm32f3]
 # features = ["stm32f303", "rt"]
 # version = "0.7.1"
+
+[dependencies.stm32f4xx-hal]
+version = "0.20.0"
+features = ["stm32f439", "defmt", ]
 
 # this lets you use `cargo fix`!
 [[bin]]
