@@ -6,11 +6,13 @@
 use panic_halt as _;
 
 use cortex_m_rt::entry;
-use cortex_m_semihosting::{debug, hprintln};
+use cortex_m_semihosting::hprintln;
+
+use stm32f4xx_hal as _;
 
 #[entry]
 fn main() -> ! {
-	hprintln!("Hello, world!").unwrap();
+	hprintln!("Hello, world!");
 
 	// exit QEMU
 	// NOTE do not run this on hardware; it can corrupt OpenOCD state
